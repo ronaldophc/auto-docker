@@ -1,0 +1,4 @@
+tasks:
+  up:
+    usage: start the docker containers
+    run: docker compose up -d

@@ -13,15 +13,16 @@ services:
             - laravel-network
 
     # nuxt
-    # node-nuxt:
-    #     image: node:21
-    #     container_name: node-nuxt
-    #     restart: unless-stopped
-    #     ports:
-    #         - '3000:3000'
-    #     working_dir: /var/www
-    #     volumes:
-    #         - ./nuxt:/var/www
+    node-nuxt:
+        image: node:21
+        container_name: node-nuxt
+        restart: unless-stopped
+        ports:
+            - '3000:3000'
+        working_dir: /var/www
+        volumes:
+            - ./nuxt:/var/www
+        command: npm run dev
 
     # nginx
     laravel-nginx:
